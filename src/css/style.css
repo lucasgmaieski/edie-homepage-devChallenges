@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font1: 'Heebo', sans-serif;
+    --font2: 'Poppins', sans-serif;
+    --font3: 'Montserrat', sans-serif;
+    
+    --bg-color1: #ffffff;
+    --bg-color2: #100E1D;
+    --bg-color3: #f2f2f2;
+    --buttom-color: #2D9CDB;
+    --text-color1: #333333;
+    --text-color2: #4f4f4f;
+    --text-color3: #828282;
+    --text-color4: #bdbdbd;
+    --text-color5: #EB5757;
+}
+
+html {
+    font-size: 62.5%;
+}
+a {
+    text-decoration: none;
+}
+h1 ,h2 , h3 {
+    color: var(--text-color1);
+    font-family: var(--font2);
+}
+.header menu ul li a,
+.hero .title h1,
+.hero .title p,
+.hero .apresentation h2,
+.hero .apresentation form input::placeholder,
+.services h2,
+.services .container-services .box-services buttom a {
+    font-weight: 500;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 4rem 5rem 10rem 5rem
+}
+.header .burguer {
+    display: none;
+}
+.header menu ul {
+    display: flex;
+    list-style-type: none;
+}
+.header menu ul li {
+    margin-left: 3.0rem;
+}
+
+.header menu ul li a {
+    font-size: clamp(1.8rem, 2vw, 2.4rem);
+    padding-bottom: 1.0rem;
+}
+.header menu ul li a:hover {
+    border-bottom: 0.2rem solid var(--text-color1);
+}
+
+body {
+    max-width: 132rem;
+    margin: auto;
+}
+
+.hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: baseline; */
+    gap: 4.0rem;
+    font-family: var(--font2);
+}
+.hero .title {
+    width: clamp(27rem, 35vw, 54rem);
+    min-width: 27rem;
+    text-align: start;
+    margin-left: 20%;
+    
+}
+.hero .title p {
+    color: var(--buttom-color);
+    font-size: clamp(1.2rem, 1.4vw, 1.8rem);
+    font-family: var(--font2);
+    padding-bottom: 1.5rem;
+}
+.hero .title h1 {
+    font-size: clamp(2.4rem, 3.0vw, 4.8rem);
+    overflow-wrap: break-word;
+  word-wrap: break-word;
+    
+}
+.hero .container-img {
+    width: 100%;
+}
+.hero .container-img img {
+    width: clamp(34rem, 95vw, 133rem);
+    margin: auto;
+}
+.hero .apresentation {
+    width: clamp(27rem, 30vw, 36rem);
+    margin-left: 20%;
+    overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+.hero .apresentation h2 {
+    font-size: clamp(2.4rem, 3.5vw, 4.8rem);
+    
+}
+.hero .apresentation p {
+    font-size: clamp(1.2rem, 1.4vw, 1.8rem);
+    font-family: var(--font2);
+    color: var(--text-color2);
+    font-weight: 400;
+    padding: 4.2rem 0;
+}
+
+.hero .apresentation form label {
+    font-size: clamp(1.0rem, 2vw, 1.4rem);
+    color: var(--text-color3);
+}
+.hero .apresentation form .input-box {
+    background-color: var(--bg-color3);
+    border-radius: 12px;
+    width: 100%;
+    display: flex;
+}
+.hero .apresentation form input[type=email] {
+    padding: 1.5rem 0.5rem 1.5rem 2.1rem;
+    border: none;
+    background: transparent;
+    width: 100%;
+}
+.hero .apresentation form input[type=email]:focus {
+    outline: none;
+}
+.hero .apresentation form input[type=submit] {
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    padding: 1.1rem 2.0rem;
+    border-radius: 12px;
+    background-color: var(--buttom-color);
+    color: var(--bg-color3);
+    border: none;
+}
+.hero .apresentation form input::placeholder {
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    font-family: var(--font2);
+    color: var(--text-color4);
+}
+
+.services {
+    max-width: 110rem;
+    margin: auto;
+}
+.services h2 {
+    font-size: clamp(2.4rem, 3vw, 3.6rem);
+    width: clamp(26rem, 20vw, 34.6rem);
+    padding-left: 2rem;
+}
+.services .container-services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.0rem;
+    margin-top: 4.0rem;
+}
+.services .container-services .box-services {
+    flex: 1 1 23rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    border-radius: 24px;
+}
+.services .container-services .box-services .icon-services, 
+.services .container-services .box-services h3,
+.services .container-services .box-services p,
+.services .container-services .box-services a{
+    margin: 0 3.5rem;
+}
+.services .container-services .box-services:hover {
+    box-shadow: 0 .1rem .3rem rgba(51, 51, 0, 0.1);
+    cursor: pointer;
+}
+.services .container-services .box-services .icon-services {
+    width: 6.7rem;
+    height: 6.7rem;
+    font-size: 3.0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    margin-top: 5.5rem;
+}
+.services .container-services .box-services h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    
+}
+.services .container-services .box-services p {
+    font-size: 1.6rem;
+}
+
+.services .container-services .box-services  a {
+    font-size: 1.6rem;
+    color: var(--text-color3);
+    background-color: #e0e0e0;
+    border-radius: 1.2rem;
+    padding: 1.0rem;
+    display: block;
+    width: max-content;
+    margin-bottom: 5.5rem;
+}
+.services .container-services .box-services:nth-child(1) .icon-services {
+    background-color: var(--buttom-color);
+}
+.services .container-services .box-services:nth-child(2) .icon-services {
+    background-color: #27AE60;
+    ;
+}
+.services .container-services .box-services:nth-child(3) .icon-services {
+    background-color:var(--text-color5);
+    ;
+}
+.services .container-services .box-services .icon-services i {
+    font-size: 0rem;
+    color: var(--bg-color1);
+}
+
+/* .preview-container .preview-image,
+.preview-container .preview-content {
+    flex: 1;
+}
+
+.preview-container .preview-image {
+    max-width: fit-content;
+    flex-basis: 7rem;
+}
+
+.preview-container .preview-image img {
+    width: 16rem;
+    width: clamp(10rem, 30vw, 16rem);
+    border-radius: 2.4rem;
+}
+
+.preview-container .name {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    color: var(--c2);
+    margin-bottom: .8rem;
+} */
