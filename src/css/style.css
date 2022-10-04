@@ -26,7 +26,7 @@ html {
 a {
     text-decoration: none;
 }
-h1 ,h2 , h3 {
+h1 ,h2 , h3, p{
     color: var(--text-color1);
     font-family: var(--font2);
 }
@@ -36,6 +36,10 @@ h1 ,h2 , h3 {
 .hero .apresentation h2,
 .hero .apresentation form input::placeholder,
 .services h2,
+.works .container-works .box-works h3,
+.meet .meet-description h2,
+.clients h2,
+.clients .client h3,
 .services .container-services .box-services buttom a {
     font-weight: 500;
 }
@@ -69,7 +73,9 @@ body {
     max-width: 132rem;
     margin: auto;
 }
-
+.container {
+    padding: 1.5rem;
+}
 .hero {
     width: 100%;
     display: flex;
@@ -157,11 +163,12 @@ body {
 
 .services {
     max-width: 110rem;
-    margin: auto;
+    margin:20rem auto;
+    
 }
 .services h2 {
     font-size: clamp(2.4rem, 3vw, 3.6rem);
-    width: clamp(26rem, 20vw, 34.6rem);
+    width: clamp(26rem, 25vw, 34.6rem);
     padding-left: 2rem;
 }
 .services .container-services {
@@ -188,6 +195,10 @@ body {
     box-shadow: 0 .1rem .3rem rgba(51, 51, 0, 0.1);
     cursor: pointer;
 }
+.services .container-services .box-services:hover a {
+    background-color: var(--buttom-color);
+    color: var(--bg-color1);
+}
 .services .container-services .box-services .icon-services {
     width: 6.7rem;
     height: 6.7rem;
@@ -201,7 +212,6 @@ body {
 .services .container-services .box-services h3 {
     font-size: 2.4rem;
     font-weight: 700;
-    
 }
 .services .container-services .box-services p {
     font-size: 1.6rem;
@@ -222,17 +232,150 @@ body {
 }
 .services .container-services .box-services:nth-child(2) .icon-services {
     background-color: #27AE60;
-    ;
 }
 .services .container-services .box-services:nth-child(3) .icon-services {
     background-color:var(--text-color5);
-    ;
 }
 .services .container-services .box-services .icon-services i {
     font-size: 0rem;
     color: var(--bg-color1);
 }
 
+
+.works {
+    max-width: 110rem;
+    margin:20rem auto;
+    
+}
+.works h2 {
+    font-size: clamp(2.4rem, 3vw, 3.6rem);
+    width: clamp(26rem, 30vw, 45rem);
+    padding-left: 2rem;
+}
+
+.works .container-works {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0rem 3rem;
+}
+
+.works .container-works .box-works:nth-child(1) {
+    padding-top: 15rem;
+}
+.works .container-works .box-works:nth-child(3) {
+    padding-top: 15rem;
+}
+.works .container-works .box-works:nth-child(4) {
+    position: relative;
+}
+.works .container-works .box-works .content-img {
+    flex: 1 1 27rem;
+}
+.works .container-works .box-works .content-img img {
+    width: 100%;
+    border-radius: 1.2rem;
+}
+.works .container-works .box-works p {
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    font-weight:300;
+    color: var(--text-color3);
+    padding-bottom: 1rem;
+}
+.works .container-works .box-works h3,
+.works .container-works .box-works a {
+    font-size: clamp(1.8rem, 2vw, 2.4rem);
+
+}
+.works .container-works .box-works a {
+    color: var(--buttom-color);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.works .container-works .box-works .content-img {
+    margin-bottom: 2.0rem;
+    overflow: auto;
+}
+
+
+.meet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 0 20rem 0;
+}
+.meet .meet-description {
+    max-width: 28rem;
+    flex-shrink: 1;
+}
+.meet .meet-description p:first-child {
+    color: var(--text-color5);
+    font-size: 1.8rem;
+}
+.meet .meet-description p:last-child {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-color2);
+}
+.meet .meet-description h2 {
+    font-size: 3.6rem;
+}
+.meet .meet-team {
+    display: grid;
+    grid-template-areas: "person3 person1"
+                         "person3 person2";
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 4;
+    gap: 2.4rem;
+}
+.meet .meet-team .person img {
+    
+    border-radius: 2.4rem;
+}
+.meet .meet-team .person1 {
+    grid-area: person1;
+    flex: 1 1 14.5rem; 
+}
+.meet .meet-team .person1 img {
+    width: clamp(14.4rem, 25vw, 26rem);
+}
+.meet .meet-team .person2 {
+    grid-area: person2;
+    flex: 1 1 16rem;
+}
+.meet .meet-team .person2 img {
+    width: clamp(16rem, 30vw, 29rem);
+}
+.meet .meet-team .person3 {
+    grid-area: person3;
+    flex: 1 1 17.8rem;
+}
+.meet .meet-team .person3 img {
+    width: clamp(17.8rem, 35vw, 32rem);
+}
+
+
+
+.clients h2 {
+    font-size:clamp(2.4rem, 3vw, 3.6rem);
+    max-width: 92rem;
+}
+.clients .client {
+    display: flex;
+    width: 30.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.clients .client img {
+    width: 8.2rem;
+    border-radius: 12px;
+} 
+.clients .client h3 {
+    font-size: 2.4rem;
+
+}
 /* .preview-container .preview-image,
 .preview-container .preview-content {
     flex: 1;
