@@ -77,11 +77,11 @@ h1 ,h2 , h3, p{
 }
 
 body {
-    /* max-width: 132rem; */
     margin: auto;
     min-height: 100vh;
     min-width: 100vw;
 }
+
 .container {
     padding: 1.5rem;
 }
@@ -89,7 +89,6 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* align-items: baseline; */
     gap: 4.0rem;
     font-family: var(--font2);
 }
@@ -137,7 +136,6 @@ body {
     font-weight: 400;
     padding: 4.2rem 0;
 }
-
 .hero .apresentation form label,
  .footer form label {
     font-size: clamp(1.0rem, 2vw, 1.4rem);
@@ -270,13 +268,11 @@ body {
     width: clamp(26rem, 30vw, 45rem);
     padding-left: 2rem;
 }
-
 .works .container-works {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0rem 3rem;
 }
-
 .works .container-works .box-works:nth-child(1) {
     padding-top: 15rem;
 }
