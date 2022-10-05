@@ -10,7 +10,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/solutions/yKgkmJgke7ZcwzhqX00e">
+    <a href="https://devchallenges.io/solutions/kVWb4LQ2VB1N8xbjAqX7">
       Solution
     </a>
     <span> | </span>
