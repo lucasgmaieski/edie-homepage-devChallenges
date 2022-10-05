@@ -9,14 +9,12 @@ html {
     .header nav button {
         display: block;
         border: none;
-        border-radius: 0.5rem;
-        font-size: 2.5rem;
-        
-        
+        background-color: #fff;
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
     }
     .header nav button img {
-        color: #fff;
-        background-color: #fff;
         width: 3rem;
         height: 3rem;
     }
@@ -29,8 +27,6 @@ html {
         width: 140px;
         background-color: #fff;
         border-radius: 12px 0 12px 12px;
-        /* padding: 40px; */
-        
         flex-direction: column;
         box-shadow: 0 .1rem .3rem rgba(51, 51, 0, 0.1);
         cursor: pointer;
@@ -48,10 +44,75 @@ html {
         max-height: 0px;
         overflow: auto;
         display: none;
-        
     }
 
+    .hero {
+        gap: 2rem;
+    }
+    .hero .title,
+    .hero .apresentation {
+        margin-left: 10%;
+    }
+    .hero .apresentation p {
+        padding: 3rem 0rem;
+    }
     
+    .services {
+        margin: 10rem auto;
+    }
+
+    .works {
+        margin: 13rem auto 10rem auto;
+    }
+    .works h2 {
+        padding: 0;
+    }
+    .works .container-works {
+        grid-template-columns: 1fr;
+    }
+    .works .container-works .box-works,
+    .works .container-works .box-works:nth-child(1),
+    .works .container-works .box-works:nth-child(3)  {
+        padding-top: 3.5rem;
+    }
+    .works .container-works .box-works:nth-child(4) {
+        padding-bottom: 3.5rem;
+    }
+    .works .container-works .box-works a {
+        left: 0;
+    }
+    .works .container-works .box-works .content-img {
+        margin-bottom: 1rem;
+    }
+    .works .container-works .box-works p {
+        padding-bottom: 0rem;
+    }
+
+    .meet {
+        flex-direction: column;
+        padding-bottom: 10rem;
+    }
+    .meet .meet-description {
+        padding-bottom: 3.5rem;
+        align-self: flex-start;
+    }
+    .meet .meet-team {
+        gap: 1rem;
+    }
+
+    .clients {
+        margin-bottom: 10rem;
+    }
+    .clients .client {
+        margin-top: 2.5rem;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+    .footer .social {
+        padding: 6.5rem 0;
+    }
 }
 
 .header botton {

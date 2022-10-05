@@ -22,6 +22,8 @@
 
 html {
     font-size: 62.5%;
+    width: fit-content;
+    margin: auto;
 }
 a {
     text-decoration: none;
@@ -78,6 +80,7 @@ body {
     /* max-width: 132rem; */
     margin: auto;
     min-height: 100vh;
+    min-width: 100vw;
 }
 .container {
     padding: 1.5rem;
@@ -110,17 +113,18 @@ body {
     
 }
 .hero .container-img {
-    width: 100%;
+    max-width: fit-content;
 }
 .hero .container-img img {
-    width: clamp(34rem, 95vw, 133rem);
-    margin: auto;
+    width: clamp(34rem, 100%, 133rem);
+    border-radius: 18px;
+    /* margin: auto; */
 }
 .hero .apresentation {
     width: clamp(27rem, 30vw, 36rem);
     margin-left: 20%;
     overflow-wrap: break-word;
-  word-wrap: break-word;
+    word-wrap: break-word;
 }
 .hero .apresentation h2 {
     font-size: clamp(2.4rem, 3.5vw, 4.8rem);
@@ -197,6 +201,7 @@ body {
     flex-direction: column;
     gap: 3.5rem;
     border-radius: 24px;
+    /* max-width: 50vw; */
 }
 .services .container-services .box-services .icon-services, 
 .services .container-services .box-services h3,
@@ -287,6 +292,10 @@ body {
 .works .container-works .box-works .content-img img {
     width: 100%;
     border-radius: 1.2rem;
+    transition: 0.4s ease-in-out;
+}
+.works .container-works .box-works .content-img img:hover {
+    transform: scale(0.98);
 }
 .works .container-works .box-works p {
     font-size: clamp(1.2rem, 2vw, 1.4rem);
@@ -346,8 +355,11 @@ body {
     gap: 2.4rem;
 }
 .meet .meet-team .person img {
-    
     border-radius: 2.4rem;
+    transition: 0.5s ease-in-out;
+}
+.meet .meet-team .person img:hover {
+    transform: translateY(1rem);
 }
 .meet .meet-team .person1 {
     grid-area: person1;
@@ -434,6 +446,12 @@ footer {
     display: block;
     color: var(--bg-color3);
 }
+.footer .social a:hover {
+    opacity: 0.6;
+}
+.footer .social .link {
+    display: inline-block;
+}
 .footer .social svg {
     margin-right: 1rem;
 }
@@ -450,6 +468,11 @@ footer p {
     color: var(--bg-color3);
     width: 100%;
     text-align: center;    
+}
+footer >p a {
+    color: var(--bg-color3);
+    font-weight: 800;
+    text-decoration: underline;
 }
 
 /* .preview-container .preview-image,
