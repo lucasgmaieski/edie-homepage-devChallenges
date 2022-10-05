@@ -47,31 +47,37 @@ h1 ,h2 , h3, p{
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     padding: 4rem 5rem 10rem 5rem
 }
-.header .burguer {
+.header a {
+    color: var(--text-color1);
+}
+.header nav button {
     display: none;
 }
-.header menu ul {
+.header nav ul {
     display: flex;
     list-style-type: none;
+    flex-wrap: wrap;
 }
-.header menu ul li {
+.header nav ul li {
     margin-left: 3.0rem;
 }
 
-.header menu ul li a {
+.header nav ul li a {
     font-size: clamp(1.8rem, 2vw, 2.4rem);
     padding-bottom: 1.0rem;
+    
 }
-.header menu ul li a:hover {
+.header nav ul li a:hover {
     border-bottom: 0.2rem solid var(--text-color1);
 }
 
 body {
-    max-width: 132rem;
+    /* max-width: 132rem; */
     margin: auto;
+    min-height: 100vh;
 }
 .container {
     padding: 1.5rem;
@@ -128,34 +134,41 @@ body {
     padding: 4.2rem 0;
 }
 
-.hero .apresentation form label {
+.hero .apresentation form label,
+ .footer form label {
     font-size: clamp(1.0rem, 2vw, 1.4rem);
     color: var(--text-color3);
 }
-.hero .apresentation form .input-box {
+.hero .apresentation form .input-box,
+ .footer form .input-box{
     background-color: var(--bg-color3);
     border-radius: 12px;
     width: 100%;
     display: flex;
 }
-.hero .apresentation form input[type=email] {
+.hero .apresentation form input[type=email], 
+.footer form input[type=email]{
     padding: 1.5rem 0.5rem 1.5rem 2.1rem;
     border: none;
     background: transparent;
     width: 100%;
 }
-.hero .apresentation form input[type=email]:focus {
+.hero .apresentation form input[type=email]:focus,
+.footer form input[type=email]:focus {
     outline: none;
 }
-.hero .apresentation form input[type=submit] {
+.hero .apresentation form input[type=submit],
+ .footer form input[type=submit]{
     font-size: clamp(1.4rem, 2vw, 1.8rem);
-    padding: 1.1rem 2.0rem;
+    padding: 0rem 2.0rem;
     border-radius: 12px;
     background-color: var(--buttom-color);
     color: var(--bg-color3);
     border: none;
+    margin: .3rem;
 }
-.hero .apresentation form input::placeholder {
+.hero .apresentation form input::placeholder,
+.footer form input::placeholder {
     font-size: clamp(1.4rem, 2vw, 1.8rem);
     font-family: var(--font2);
     color: var(--text-color4);
@@ -299,6 +312,8 @@ body {
 
 
 .meet {
+    max-width: 110rem;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -357,7 +372,11 @@ body {
 }
 
 
-
+.clients {
+    max-width: 110rem;
+    margin: auto;
+    margin-bottom: 20rem;
+}
 .clients h2 {
     font-size:clamp(2.4rem, 3vw, 3.6rem);
     max-width: 92rem;
@@ -367,6 +386,7 @@ body {
     width: 30.5rem;
     justify-content: space-between;
     align-items: center;
+    margin-top: 4.5rem;
 }
 .clients .client img {
     width: 8.2rem;
@@ -374,8 +394,64 @@ body {
 } 
 .clients .client h3 {
     font-size: 2.4rem;
+    padding-bottom: 1.2rem;
+}
+.clients .client p {
+    font-size: 1.8rem;
+    color: var(--text-color3);
+}
+
+
+footer {
+    background-color: var(--bg-color2);
+    width: 100%;
+    padding-top: 4.6rem;
+    padding-bottom: 16rem;
+    position: relative;
+}
+.footer {
+    max-width: 110rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4.2rem;
+}
+.footer menu ul li {
+    padding-bottom: 1rem;
 
 }
+.footer menu ul li a {
+    text-decoration: none;
+    color: var(--bg-color1);
+    font-size: 1.8rem;
+}
+.footer .social a, .header a {
+    font-size: 3.6rem;
+    font-weight: 800;
+    font-family: var(--font1);
+}
+.footer .social a {
+    display: block;
+    color: var(--bg-color3);
+}
+.footer .social svg {
+    margin-right: 1rem;
+}
+.footer form label {
+    color: var(--bg-color3);
+    font-size: clamp(1rem , 2vw, 1.4rem);
+}
+.footer form .input-box {
+    margin-top: .8rem;
+}
+footer p {
+    position: absolute;
+    bottom: 2%;
+    color: var(--bg-color3);
+    width: 100%;
+    text-align: center;    
+}
+
 /* .preview-container .preview-image,
 .preview-container .preview-content {
     flex: 1;

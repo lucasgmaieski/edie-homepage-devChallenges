@@ -1,0 +1,60 @@
+html {
+    font-size: 62.5%;
+}
+
+@media(max-width: 630px) {
+    .header {
+        padding: 1.5rem 1.5rem 5rem 1.5rem;
+    } 
+    .header nav button {
+        display: block;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 2.5rem;
+        
+        
+    }
+    .header nav button img {
+        color: #fff;
+        background-color: #fff;
+        width: 3rem;
+        height: 3rem;
+    }
+    .header nav {
+        position: relative;
+    }
+    .header nav ul {
+        position: absolute;
+        right: 0;
+        width: 140px;
+        background-color: #fff;
+        border-radius: 12px 0 12px 12px;
+        /* padding: 40px; */
+        
+        flex-direction: column;
+        box-shadow: 0 .1rem .3rem rgba(51, 51, 0, 0.1);
+        cursor: pointer;
+        margin-bottom: 15px;
+    }
+    .header nav ul li {
+        padding: 8px 0px;
+        
+    }
+    .header nav ul li a {
+        padding-bottom: 0px;
+    }
+    .open {
+        width: 0px;
+        max-height: 0px;
+        overflow: auto;
+        display: none;
+        
+    }
+
+    
+}
+
+.header botton {
+    display: none;
+}
+
